@@ -85,7 +85,8 @@ export default function CardDeck({ data, onReset }) {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.4 }}
-      className="flex flex-col items-center justify-center min-h-screen px-4 py-8 relative z-10"
+      className="flex flex-col items-center justify-center min-h-screen px-4 py-8 relative z-10 w-full"
+      style={{ overflowX: 'hidden' }}
       {...swipeHandlers}
     >
       {/* Back button */}
@@ -115,7 +116,12 @@ export default function CardDeck({ data, onReset }) {
       {/* Card area */}
       <div
         className="relative flex items-center justify-center"
-        style={{ width: '100%', maxWidth: '480px', height: '640px' }}
+        style={{
+          width: '100%',
+          maxWidth: 'min(480px, calc(100vw - 2rem))',
+          height: '640px',
+          overflow: 'hidden',
+        }}
       >
         <AnimatePresence initial={false} custom={direction} mode="wait">
           <motion.div

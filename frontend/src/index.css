@@ -169,6 +169,15 @@ body {
     0 0 30px rgba(0, 245, 255, 0.06),
     0 0 60px rgba(0, 245, 255, 0.03),
     inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  min-width: 0;
+}
+
+/* Smaller padding on narrow viewports so content doesn't spill */
+@media (max-width: 420px) {
+  .card {
+    padding: 1.5rem 1.25rem;
+    border-radius: 14px;
+  }
 }
 
 .card::before {
@@ -221,6 +230,9 @@ body {
   font-size: 1.75rem;
   line-height: 1.15;
   letter-spacing: -0.02em;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
 }
 
 .headline-lg {
@@ -229,6 +241,9 @@ body {
   font-size: 1.35rem;
   line-height: 1.2;
   letter-spacing: -0.01em;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
 }
 
 .subtext {
@@ -236,6 +251,8 @@ body {
   font-size: 0.8rem;
   line-height: 1.5;
   color: var(--text-secondary);
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .label-caps {
@@ -318,7 +335,8 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 280px;
+  max-width: 100%;
+  min-width: 0;
 }
 
 /* --- Scrollbar --- */

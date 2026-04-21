@@ -88,12 +88,15 @@ export default function CardFinal({ data, isActive }) {
         transition={{ duration: 0.6, delay: 0.25 }}
         className="font-display font-extrabold text-center"
         style={{
-          fontSize: 'clamp(1.5rem, 6vw, 2.2rem)',
+          fontSize: 'clamp(1.3rem, 5.5vw, 2.1rem)',
           lineHeight: 1.1,
           textTransform: 'uppercase',
           letterSpacing: '-0.02em',
           color: 'var(--text-primary)',
           textShadow: '0 0 30px rgba(0, 245, 255, 0.2)',
+          overflowWrap: 'break-word',
+          wordBreak: 'break-word',
+          hyphens: 'auto',
         }}
       >
         {archetype_title}
@@ -108,6 +111,8 @@ export default function CardFinal({ data, isActive }) {
         style={{
           fontSize: '0.78rem',
           color: 'var(--text-secondary)',
+          overflowWrap: 'break-word',
+          wordBreak: 'break-word',
         }}
       >
         {archetype_subtitle}
@@ -140,6 +145,8 @@ export default function CardFinal({ data, isActive }) {
             fontSize: '0.9rem',
             lineHeight: 1.35,
             color: 'var(--text-primary)',
+            overflowWrap: 'break-word',
+            wordBreak: 'break-word',
           }}
         >
           {headline}
@@ -150,6 +157,8 @@ export default function CardFinal({ data, isActive }) {
             fontSize: '0.72rem',
             lineHeight: 1.5,
             color: 'var(--text-secondary)',
+            overflowWrap: 'break-word',
+            wordBreak: 'break-word',
           }}
         >
           {subtext}
@@ -161,7 +170,7 @@ export default function CardFinal({ data, isActive }) {
         initial={{ opacity: 0, y: 8 }}
         animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 8 }}
         transition={{ duration: 0.5, delay: 0.65 }}
-        className="flex items-center justify-center gap-2 my-3 flex-wrap"
+        className="flex items-center justify-center gap-x-2 gap-y-1 my-3 flex-wrap w-full"
       >
         <StatChip value={`~${total_commits}`} label="commits" />
         <span style={{ color: 'var(--text-secondary)', opacity: 0.3 }}>&middot;</span>

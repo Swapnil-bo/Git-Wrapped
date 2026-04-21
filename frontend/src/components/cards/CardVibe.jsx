@@ -49,10 +49,13 @@ export default function CardVibe({ data, isActive }) {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="font-display font-bold"
           style={{
-            fontSize: '1.5rem',
+            fontSize: 'clamp(1.2rem, 4.5vw, 1.5rem)',
             lineHeight: 1.25,
             color: 'var(--text-primary)',
             paddingLeft: '0.25rem',
+            overflowWrap: 'break-word',
+            wordBreak: 'break-word',
+            hyphens: 'auto',
           }}
         >
           {headline}
@@ -74,7 +77,8 @@ export default function CardVibe({ data, isActive }) {
           initial={{ opacity: 0 }}
           animate={isActive ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
-          className="flex flex-wrap gap-2 mt-6"
+          className="flex flex-wrap gap-2 mt-6 w-full"
+          style={{ minWidth: 0 }}
         >
           {messages.length > 0 ? (
             messages.map((msg, i) => (

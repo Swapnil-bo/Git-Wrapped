@@ -44,10 +44,10 @@ export default function CardDNA({ data, isActive }) {
               transition={{ duration: 0.4, delay: 0.2 + i * 0.1 }}
             >
               {/* Label row */}
-              <div className="flex justify-between items-center mb-1.5">
-                <div className="flex items-center gap-2">
+              <div className="flex justify-between items-center mb-1.5 gap-2">
+                <div className="flex items-center gap-2 min-w-0">
                   <div
-                    className="rounded-full"
+                    className="rounded-full flex-shrink-0"
                     style={{
                       width: '8px',
                       height: '8px',
@@ -56,14 +56,14 @@ export default function CardDNA({ data, isActive }) {
                     }}
                   />
                   <span
-                    className="font-mono"
+                    className="font-mono truncate"
                     style={{ fontSize: '0.8rem', color: 'var(--text-primary)' }}
                   >
                     {lang.name}
                   </span>
                 </div>
                 <span
-                  className="font-mono"
+                  className="font-mono flex-shrink-0"
                   style={{ fontSize: '0.75rem', color: 'var(--text-secondary)' }}
                 >
                   {lang.percent}%
