@@ -108,4 +108,4 @@ After both deploy, set `FRONTEND_URL` on Render to your Vercel URL for CORS.
 
 ---
 
-*Built by Swapnil Hazra — 100 Days of Vibe Coding*
+*Built by Swapnil Hazra*
